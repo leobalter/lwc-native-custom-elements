@@ -1,9 +1,0 @@
-.children {
-    display: flex;
-    justify-content: space-around;
-}
-
-p.dynamic {
-    border-bottom: black 1px solid;
-    padding-bottom: 12px;
-}
