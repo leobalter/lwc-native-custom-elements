@@ -1,0 +1,71 @@
+<template>
+  <div class="demo">
+    <h2>Hello world using Lit</h2>
+    <p>This component is rendered using a Lit Component and a LWC input component</p>
+
+    <my-lit lwc:external name={name}>Hello World!</my-lit>
+
+    <lightning-input onchange={changeName} value={name}></lightning-input>
+
+    <div class="code">
+        &lt;my-lit <b>lwc:external</b>  name=&#123;name&#125;&gt;Hello World!&lt;/my-lit&gt;<br>
+        <br>
+        &lt;lightning-input onchange=&#123;changeName&#125; value=&#123;name&#125;&gt;&lt;/lightning-input&gt;
+    </div>
+
+    <div class="code">
+      import &#123;LitElement, html, css&#125; from 'c/lit';<br>
+      <br>
+      export default class Foo extends LitElement &#123;<br>
+      &nbsp;&nbsp;static styles = css`<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;p &#123;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid green;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 8px;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&#125;`;<br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;static properties = &#123;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: &#123;type: String&#125;,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&#125;;<br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;name = 'TDX Champions';<br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;render() &#123;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return html`&lt;p&gt;Hello, $&#123;this.name || 'TDX'&#125;!&lt;/p&gt;`;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&#125;<br>
+      &#125;<br>
+      <br>
+      customElements.define('my-lit', Foo);<br>
+    </div>
+  </div>
+  
+  <div class="demo">
+    <h2>the Emoji Picker Component</h2>
+
+    <emoji-picker lwc:external></emoji-picker>
+
+    <p>This component is rendered using the a non-LWC component</p>
+    <p>Source: <a href="https://github.com/nolanlawson/emoji-picker-element">GitHub repo</a></p>
+
+    <div class="code">
+      <pre>
+        &lt;emoji-picker <b>lwc:external</b>&gt;&lt;/emoji-picker&gt;
+      </pre>
+    </div>
+  </div>
+
+  <div class="demo">
+    <h2>Lit Date Picker</h2>
+    
+    <p>This component renders a Date Picker using the Lit framework</p>
+
+    <lit-date-picker lwc:external></lit-date-picker>
+
+    <div class="code">
+      <pre>
+        &lt;lit-date-picker <b>lwc:external</b>&gt;&lt;/lit-date-picker&gt;
+      </pre>
+    </div>
+    
+  </div>
+</template>

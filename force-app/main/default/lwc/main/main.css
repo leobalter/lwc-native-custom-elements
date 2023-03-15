@@ -1,0 +1,29 @@
+:host {
+  background-color: aliceblue;
+  padding-left: 0;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto;
+}
+
+.demo {
+  border: 1px solid #000;
+  padding: 1rem;
+  width: max-content;
+  background: #fff;
+}
+
+.demo h2 {
+  font-size: 1.6em;
+}
+
+.code {
+  background: #444;
+  color: #fff;
+  min-width: 100px;
+  padding: 10px;
+  line-height: 1.4em;
+  font-family: monospace;
+  margin: 1em 0;
+}
